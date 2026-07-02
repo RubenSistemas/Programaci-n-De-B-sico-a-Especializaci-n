@@ -49,10 +49,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    padding: 20px;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 /* Animación de fondo vivo */
@@ -97,18 +98,21 @@ body::after {
     background: var(--glass-bg);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    width: 100%;
+    width: 95%;
     max-width: 750px;
+    max-height: 98vh;
     border-radius: 24px;
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255,255,255,0.1);
     border: 1px solid var(--glass-border);
     overflow: hidden;
     position: relative;
     z-index: 10;
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
-    padding: 40px 20px 20px;
+    padding: 20px 20px 15px;
     text-align: center;
     position: relative;
     border-bottom: 1px solid var(--glass-border);
@@ -117,18 +121,18 @@ body::after {
 .logo-container {
     position: relative;
     z-index: 1;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     display: inline-block;
 }
 
 /* El logo resaltará sobre un pequeño resplandor blanco/transparente */
 .logo-container img {
-    max-width: 130px;
+    max-width: 80px;
     height: auto;
-    border-radius: 16px;
-    box-shadow: 0 0 30px rgba(255,255,255,0.15);
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.15);
     background: rgba(255, 255, 255, 0.95);
-    padding: 8px;
+    padding: 5px;
     transition: transform 0.3s ease;
 }
 
@@ -137,10 +141,10 @@ body::after {
 }
 
 .header h1 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     font-weight: 700;
     letter-spacing: -0.5px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
     background: linear-gradient(to right, #fff, var(--cyan-neon));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -148,38 +152,40 @@ body::after {
 }
 
 .header p {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     color: var(--cyan-neon);
     font-weight: 400;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     text-transform: uppercase;
+    margin-top: 5px;
 }
 
 .form-content {
-    padding: 40px;
+    padding: 20px 30px 25px;
+    overflow-y: auto;
 }
 
 .form-group {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     position: relative;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-weight: 500;
     color: var(--cyan-neon);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     letter-spacing: 0.5px;
 }
 
 /* Selectores Neón/Dark */
 select {
     width: 100%;
-    padding: 16px 20px;
+    padding: 10px 15px;
     border: 1px solid var(--glass-border);
-    border-radius: 12px;
-    font-size: 1rem;
+    border-radius: 10px;
+    font-size: 0.95rem;
     color: var(--text-main);
     background-color: var(--input-bg);
     backdrop-filter: blur(10px);
@@ -220,8 +226,8 @@ select option {
     flex-direction: row !important; 
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 35px;
+    gap: 12px;
+    margin-top: 20px;
     width: 100%;
 }
 
@@ -230,12 +236,12 @@ select option {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    padding: 16px 10px;
+    gap: 8px;
+    padding: 12px 10px;
     color: var(--white);
     border: none;
-    border-radius: 12px;
-    font-size: 1.05rem;
+    border-radius: 10px;
+    font-size: 0.95rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
